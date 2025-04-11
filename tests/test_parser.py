@@ -175,7 +175,7 @@ async def test_parsing_docx_type():
     sample = "examples/inputs/sample.docx"
     parser_type = "STATIC_PARSE"
     results = parse(sample, parser_type)["segments"]
-    assert len(results) >= 1
+    assert len(results) == 1
     assert results[0]["content"] is not None
 
     parser_type = "LLM_PARSE"
