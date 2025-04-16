@@ -331,6 +331,7 @@ async def test_horizontal_lines():
     results = parse(sample, parser_type, framework="pdfplumber")["raw"]
     assert "\n---\n" in results, "Markdown horizontal rule not found"
 
+
 @pytest.mark.asyncio
 async def test_strikethrough_words():
     sample = "examples/inputs/bench_md.pdf"
